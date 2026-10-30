@@ -13,11 +13,12 @@
 ├── README.md           # project readme
 ├── index.html          # portal homepage
 ├── tools/
-│   └── tool-1.html     # placeholder tool page
+│   └── rc-circuit.html # RC Circuit Analyzer page
 ├── css/
 │   └── base.css        # shared styles and theme colors
 └── js/
-    └── theme.js        # light/dark theme toggle
+    ├── theme.js        # light/dark theme toggle
+    └── rc-circuit.js   # RC Circuit Analyzer logic and graph
 ```
 
 Update this section as files are added.
@@ -43,7 +44,7 @@ A portal where students learning Electrical Engineering try small web tools.
 
 1. **Phase 1: portal + first tool.**
    - [x] Portal homepage with a placeholder "Tool 1" card that opens and returns (done).
-   - [ ] First real tool: an RC circuit analyzer (in: R, C, source voltage; out: time constant, cutoff frequency, charge/discharge graph).
+   - [x] First real tool, replacing the placeholder: an RC circuit analyzer (in: R, C, source voltage; out: time constant, cutoff frequency, charge/discharge graph). Done.
 2. **Phase 2: more tools** (to be decided). Add further small Electrical Engineering tools, one at a time.
 3. **Phase 3: polish** (to be decided). Tool search or grouping once there are enough tools.
 

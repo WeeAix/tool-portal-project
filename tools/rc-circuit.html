@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RC Circuit Analyzer — EE Tool Portal</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <script src="../js/theme.js"></script>
+  <script src="../js/rc-circuit.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-name" href="../index.html">EE Tool Portal</a>
+    <button id="theme-toggle" type="button">Switch to dark theme</button>
+  </header>
+
+  <main>
+    <p><a href="../index.html">&larr; Back to all tools</a></p>
+    <h1>RC Circuit Analyzer</h1>
+    <p class="muted">Enter a resistor, a capacitor and a source voltage. See how fast the capacitor charges and discharges.</p>
+
+    <form id="rc-form" class="tool-form" novalidate>
+      <div class="field">
+        <label for="r-value">Resistance (R)</label>
+        <div class="field-row">
+          <input id="r-value" type="number" step="any" min="0" value="1" inputmode="decimal">
+          <select id="r-unit" aria-label="Resistance unit">
+            <option value="1">&Omega;</option>
+            <option value="1000" selected>k&Omega;</option>
+            <option value="1000000">M&Omega;</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="c-value">Capacitance (C)</label>
+        <div class="field-row">
+          <input id="c-value" type="number" step="any" min="0" value="1" inputmode="decimal">
+          <select id="c-unit" aria-label="Capacitance unit">
+            <option value="1e-12">pF</option>
+            <option value="1e-9">nF</option>
+            <option value="1e-6" selected>&micro;F</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="v-value">Source voltage (V)</label>
+        <div class="field-row">
+          <input id="v-value" type="number" step="any" min="0" value="5" inputmode="decimal">
+          <span class="unit-fixed">V</span>
+        </div>
+      </div>
+    </form>
+
+    <p id="error" class="error" role="alert" hidden></p>
+
+    <section id="results" aria-live="polite">
+      <h2>Results</h2>
+      <dl class="results-list">
+        <dt>Time constant (&tau;)</dt>
+        <dd id="out-tau"></dd>
+        <dt>Cutoff frequency (f<sub>c</sub>)</dt>
+        <dd id="out-fc"></dd>
+      </dl>
+
+      <svg id="graph" class="graph" viewBox="0 0 600 320" role="img"
+           aria-label="Graph of capacitor voltage over time, showing a charging curve and a discharging curve"></svg>
+
+      <h2>What this means</h2>
+      <div id="explanation"></div>
+    </section>
+  </main>
+</body>
+</html>

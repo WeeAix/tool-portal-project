@@ -94,3 +94,48 @@ main {
 @media (min-width: 64rem) {
   .tool-grid { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* RC Circuit Analyzer */
+:root { --accent2: #b3261e; }
+:root[data-theme="dark"] { --accent2: #ff8a80; }
+
+.tool-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.field { min-width: 0; }
+.field label { display: block; margin-bottom: 0.25rem; font-weight: 600; }
+.field-row { display: flex; gap: 0.5rem; align-items: center; }
+
+input[type="number"],
+select {
+  font: inherit;
+  padding: 0.4rem 0.5rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+input[type="number"] { flex: 1; width: 0; min-width: 0; }
+.unit-fixed { min-width: 3.5rem; }
+
+.error { color: var(--accent2); font-weight: 600; }
+
+.results-list { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 1rem; }
+.results-list dt { font-weight: 600; }
+.results-list dd { margin: 0; }
+
+.graph { display: block; width: 100%; height: auto; max-width: 40rem; }
+.graph-text { fill: var(--text); font-size: 16px; }
+.graph-axis { stroke: var(--text); stroke-width: 1; }
+.graph-guide { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 4 4; }
+.graph-charge { stroke: var(--link); stroke-width: 2.5; fill: none; }
+.graph-discharge { stroke: var(--accent2); stroke-width: 2.5; fill: none; stroke-dasharray: 8 4; }
+
+@media (min-width: 40rem) {
+  .tool-form { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
