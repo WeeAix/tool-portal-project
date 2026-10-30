@@ -23,6 +23,13 @@
 
 Update this section as files are added.
 
+## Visual Design
+
+Chosen design: **Lab Notebook**. Warm paper-like colors, serif headings (Fraunces), Inter for body text, JetBrains Mono for numbers and values, rounded cards with soft shadows. Colors and fonts are CSS variables at the top of `css/base.css`; change them there, not in individual pages.
+
+- Light: `#fbf7ef` background, `#2b2118` text, `#b8430a` copper accent, `#1f6f5c` teal.
+- Dark: `#1c1713` background, `#f3e9da` text, `#ff9a5c` orange accent, `#6fd1b6` teal.
+
 ## Key Requirements
 
 1. Every page must be responsive and work on desktop, tablet and phone.
