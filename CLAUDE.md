@@ -7,15 +7,20 @@
 
 ## Project Structure
 
-The project is nearly empty for now.
-
 ```
 /
-├── CLAUDE.md   # these instructions
-└── README.md   # project readme
+├── CLAUDE.md           # these instructions
+├── README.md           # project readme
+├── index.html          # portal homepage
+├── tools/
+│   └── tool-1.html     # placeholder tool page
+├── css/
+│   └── base.css        # shared styles and theme colors
+└── js/
+    └── theme.js        # light/dark theme toggle
 ```
 
-Update this section as files are added (e.g. HTML pages at the top level, plus folders for CSS and JS).
+Update this section as files are added.
 
 ## Key Requirements
 
@@ -36,7 +41,9 @@ A portal where students learning Electrical Engineering try small web tools.
 
 ### Phases
 
-1. **Phase 1: portal + first tool.** The homepage, the shared light/dark theme, and one tool: an RC circuit analyzer (in: R, C, source voltage; out: time constant, cutoff frequency, charge/discharge graph).
+1. **Phase 1: portal + first tool.**
+   - [x] Portal homepage with a placeholder "Tool 1" card that opens and returns (done).
+   - [ ] First real tool: an RC circuit analyzer (in: R, C, source voltage; out: time constant, cutoff frequency, charge/discharge graph).
 2. **Phase 2: more tools** (to be decided). Add further small Electrical Engineering tools, one at a time.
 3. **Phase 3: polish** (to be decided). Tool search or grouping once there are enough tools.
 
